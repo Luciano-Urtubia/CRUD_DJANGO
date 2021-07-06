@@ -5,7 +5,7 @@
 
 
 {% block content %}
-    <div class="container justify-content-center">|
+    <div class="container justify-content-center">
         <div class="row bg-secondary text-white rounded p-5 mt-4 mb-4">
             <h1>Listado Productos</h1>
         </div>
@@ -30,7 +30,7 @@
                              {% if p.imagen %}
                                     <td><img class="img-producto" src="{{p.imagen.url}}" alt=""></td>
                                 {% else %}
-                                    <td><img class="img-producto" src="{% static 'core/img/not-image.jpg' %}" alt=""></td>
+                                    <td><img class="img-producto" src="{% static 'core/img/not-found-image.jpg' %}" alt=""></td>
                                 {% endif %}  
                              <td>{{p.marca}}</td>
 
