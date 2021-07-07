@@ -21,7 +21,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="product-list.html">
             <img class="img-logo" src="{% static 'core/img/Tecnologia-1.jpg' %}" alt="Logo" >
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Agregar Productos</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'product-list' %}">Lista</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'product-new' %}">Prodoctos</a>

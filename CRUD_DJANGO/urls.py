@@ -22,8 +22,9 @@ from core import views as core_views
 from django.conf import settings
 
 urlpatterns = [
-    path('', core_views.home, name='home'),
-    path('product-new', core_views.add, name='product-new'),
+      path('',core_views.product_list, name='product-list'),
+      path('product-new/', core_views.product_new, name='product-new'),
+     
  
     path('admin/', admin.site.urls),
 ]
