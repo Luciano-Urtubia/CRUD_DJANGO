@@ -7,14 +7,14 @@ from .forms import ProductoForm
 
 def home(request):
     productos = Producto.objects.all()
-    return render(request,"core/index.html",{'productos':productos})
+    return render(request,"core/product-list.html",{'productos':productos})
 
 
 
 
 def add(request):
     add_producto = ProductoForm
-    return render (request,"core/add_producto.html",{'form':add_producto})
+    return render (request,"core/product-new",{'form':add_producto})
      
 
 
