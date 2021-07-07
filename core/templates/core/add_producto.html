@@ -3,5 +3,25 @@
 {% load static %}
 {% block title %} Agregar Productos | Django CRUD{% endblock %}
 
-<H1>HOLA MUNDO</H1>
-{% block content %}{% endblock %}
+
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        <form action="" method="POST" id="formulario">
+            {% csrf_token %}
+            <div class="form-group">
+                {{form.as_table}}
+               
+            </div>
+            <input class= "btn btn-secondary" type="submit" id="enviar" value="Enviar">
+            <input class= "btn btn-warning" type="reset" id="limpiar" value="Limpiar">
+
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock %}

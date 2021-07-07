@@ -14,3 +14,6 @@ class ProductoForm(ModelForm):
             'imagen',
             'marca'
         ]
+
+
+    
