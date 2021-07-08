@@ -29,3 +29,26 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.descripcion
+
+
+
+#------------------------------------------------------------------------------------------------
+
+
+class ProductoPC(models.Model):
+    idProductoPC = models.CharField(primary_key=True,max_length=10,verbose_name='ID')
+    descripcionPc = models.CharField(max_length=100,verbose_name='Descripción')
+    precioPc = models.IntegerField(verbose_name='Precio Unitario')
+    stockPc = models.IntegerField(verbose_name='Stock')
+    imagenPc = models.ImageField(verbose_name='Imagen',upload_to='productos',null=True,blank=True)
+  
+
+    class Meta:
+        verbose_name='productoPc'
+        verbose_name_plural='productosPc'
+        ordering = ['descripcionPc']
+
+    def __str__(self):
+        return self.descripcionPc
+
+        

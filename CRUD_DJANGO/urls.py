@@ -23,9 +23,13 @@ from django.conf import settings
 
 urlpatterns = [
       path('',core_views.product_list, name='product-list'),
+      path('',core_views.pc_list, name='product-list'),
       path('product-new/', core_views.product_new, name='product-new'),
+      path('product-new/', core_views.product_newPc, name='product-newPc'),
       path('product-update/ <idProducto>', core_views.product_update, name='product-update'),
+      path('product-updatePc/ <idProductoPc>', core_views.product_updatePc, name='product-updatePc'),
       path('product-delete/<idProducto>',core_views.product_delete,name='product-delete'),
+      path('product-deletePc/<idProductoPc>',core_views.product_deletePc,name='product-deletePc'),
      
  
     path('admin/', admin.site.urls),
