@@ -35,6 +35,7 @@ def product_new(request):
     return render(request,"core/product-new.html",{'form':form})
 
 
-def product_update(request):
-    form = ProductoForm
+def product_update(request, idProducto):
+    producto = Producto.objects.get(idProducto = idProducto)
+    form = ProductoForm( instance = producto )
     return render (request, "core/product-update.html",{'form':form})
