@@ -33,3 +33,8 @@ def product_new(request):
     else:
         form = ProductoForm
     return render(request,"core/product-new.html",{'form':form})
+
+
+def product_update(request):
+    form = ProductoForm
+    return render (request, "core/product-update.html",{'form':form})

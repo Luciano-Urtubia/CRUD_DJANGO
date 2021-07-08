@@ -19,6 +19,7 @@
                         <th>Stock</th>
                         <th>Imagen</th>
                         <th>Marca</th>
+                        <th>Opciones</th>
 
                     </thead>
                          {% for p in productos%}
@@ -34,7 +35,10 @@
                                 {% endif %}  
                              <td>{{p.marca}}</td>
 
-                             
+                             <td>
+                                <a class="btn btn-warning" href="{% url 'product-update' %}">Modificar</a>
+                                <a class="btn btn-danger" href="">Eliminar</a>
+                             </td>
                          </tr>
 
                          {%endfor%}
