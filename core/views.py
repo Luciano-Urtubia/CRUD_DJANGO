@@ -38,4 +38,20 @@ def product_new(request):
 def product_update(request, idProducto):
     producto = Producto.objects.get(idProducto = idProducto)
     form = ProductoForm( instance = producto )
-    return render (request, "core/product-update.html",{'form':form})
+    #return render (request, "core/product-update.html",{'form':form})
+
+    if request.method == 'POST':
+        form = ProductoForm(request.POST, request.FILES, instance = producto)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('product-list')+ "?OK")
+        else:
+            return redirect(reverse('product-update')+ idProducto)
+
+    return render(request,"core/product-update.html",{'form':form})
+
+
+def product_delete(request,idProducto):
+    producto = Producto.objects.get(idProducto = idProducto)
+    producto.delete()
+    return redirect(to='product-list')   
