@@ -3,6 +3,12 @@
     height: 80px;
 }
 
+.img-a{
+    width: 80px;
+    height: 80px;
+}
+
+
 .img-producto{
     width: 100px;
     height: 100px;
@@ -20,4 +26,17 @@
 }
 
 
+*{
+    font-style: italic;
+}
+
+
+  
+  .carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+ 
 

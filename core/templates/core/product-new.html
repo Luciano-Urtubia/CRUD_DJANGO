@@ -27,39 +27,48 @@
         <form action="" method="POST" id="formulario" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group mb-3">
-                <label for="idProductoPc" class="fw-bold">Código Producto *</label>
+                <label for="idProducto" class="fw-bold">Código Producto *</label>
                 <div class="input-group">
                     {{form.idProducto}}
                 </div>
                 {{form.idProducto.errors}}
             </div>
             <div class="form-group mb-3">
-                <label for="descripcionPc" class="fw-bold">Descripción *</label>
+                <label for="descripcion" class="fw-bold">Descripción *</label>
                 <div class="input-group">
                     {{form.descripcion}}
                 </div>
                 {{form.descripcion.errors}}
             </div>
             <div class="form-group mb-3">
-                <label for="precioPc" class="fw-bold">Precio Unitario $ *</label>
+                <label for="precio" class="fw-bold">Precio Unitario $ *</label>
                 <div class="input-group">
                     {{form.precio}}
                 </div>
                 {{form.precio.errors}}
             </div>
             <div class="form-group mb-3">
-                <label for="stockPc" class="fw-bold">Stock *</label>
+                <label for="stock" class="fw-bold">Stock *</label>
                 <div class="input-group">
                     {{form.stock}}
                 </div>
                 {{form.stock.errors}}
             </div>
             <div class="form-group mb-3">
-                <label for="imagenPc" class="fw-bold">Imagen</label>
+                <label for="imagen" class="fw-bold">Imagen</label>
                 <div class="input-group">
                     {{form.imagen}}
                 </div>
                 {{form.imagen.errors}}
+            </div>
+
+          
+            <div class="form-group mb-3">
+                <label for="marca" class="fw-bold">Imagen</label>
+                <div class="input-group">
+                    {{form.marca}}
+                </div>
+                {{form.marca.errors}}
             </div>
         
             <div class="text-center mt-4">
