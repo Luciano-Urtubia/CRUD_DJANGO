@@ -5,6 +5,9 @@ from .models import Productocelular
 from .models import roductoRi
 from .forms import ProductoForm
 from .forms2 import ProductoPcForm 
+from rest_framework import viewsets
+from .serializers import ProductoSerializer
+
 
 
 
@@ -88,3 +91,16 @@ def listaf2__(request):
     listaf2_productoPc = ProductoPcForm
     return render(request,"core/listaf2.html",)
 
+ #def listaf3__(request): 
+    #listaf3_productoPc = ProductoPc  Form
+   # return render(request,"core/listaf3.html",)  
+
+
+ #-------------------------------------------------------------------------------------------------------------  
+
+
+class ProductoViewSet(viewsets.ModelViewSet):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+
+    
