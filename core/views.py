@@ -91,9 +91,11 @@ def listaf2__(request):
     listaf2_productoPc = ProductoPcForm
     return render(request,"core/listaf2.html",)
 
- #def listaf3__(request): 
-    #listaf3_productoPc = ProductoPc  Form
-   # return render(request,"core/listaf3.html",)  
+def listaf3__(request): 
+    listaf3_productoPc = ProductoPcForm
+    return render(request,"core/listaf3.html",)    
+
+
 
 
  #-------------------------------------------------------------------------------------------------------------  

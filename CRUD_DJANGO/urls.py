@@ -38,6 +38,7 @@ urlpatterns = [
       path('lista_3/', core_views.lista3__, name='lista_3'),
       path('lista_4/', core_views.lista4__, name='lista_4'),
       path('listaf2/', core_views.listaf2__, name='listaf2'), 
+      path('listaf3/', core_views.listaf3__, name='listaf3'), 
       path('product-update/ <idProducto>', core_views.product_update, name='product-update'),
       path('product-delete/<idProducto>',core_views.product_delete,name='product-delete'),
 
