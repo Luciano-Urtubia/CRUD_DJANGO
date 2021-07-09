@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect, reverse
-from .models import Producto
-from .forms import ProductoForm
+from .models import Producto 
+from .models import ProductoPC
+from .forms import ProductoForm 
+from .forms import ProductoPcForm 
+
+
+
+
 
 # Create your views here.
 def product_list(request):
@@ -120,3 +126,138 @@ def product_deletePc(request,idProductoPC):
     productoPc = ProductoPc.objects.get(idProductoPc = idProductoPc)
     productoPc.delete()
     return redirect(to='product-list') 
+
+
+
+
+
+ #---------------------------------------------------------------------------------  
+
+
+def celular_list(request):
+    productoscelular = Productocelular.objects.all()
+    return render(request,"core/product-list.html",{'productoscelular':productoscelular})
+
+def product_newcelular(request):
+    if request.method == 'POST':
+        form = ProductocelularForm(request.POST, request.FILES)
+        if form.is_valid():
+            idProductocelular = form.cleaned_data.get("idProductocelular")
+            descripcioncelular = form.cleaned_data.get("descripcioncelular")
+            preciocelular = form.cleaned_data.get("preciocelular")
+            stockcelular = form.cleaned_data.get("stockcelular")
+            imagencelular = form.cleaned_data.get("imagencelular")
+            
+            obj = Productocelular.objects.create(
+                idProductocelular = idProductocelular,
+                descripcioncelular = descripcioncelular,
+                preciocelular = preciocelular,
+                stockcelular = stockcelular,
+                imagencelular = imagencelular,
+               
+            )
+            obj.save()
+            return redirect(reverse('product-new') + "?OK")
+            #return redirect(to ='product-list')
+        else:
+            return redirect(reverse('product-new') + "?FAIL")
+    else:
+        form = ProductocelularForm
+    return render(request,"core/product-new.html",{'form':form})
+
+
+
+
+
+def product_updatecelular(request, idProductocelular):
+    productocelular = Productocelular.objects.get(idProductocelular = idProductocelular)
+    form = ProductocelularForm( instance = productocelular )
+    #return render (request, "core/product-update.html",{'form':form})
+
+    if request.method == 'POST':
+        form = ProductocelularForm(request.POST, request.FILES, instance = productocelular)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('product-list')+ "?OK")
+        else:
+            return redirect(reverse('product-update')+ idProductocelular)
+
+    return render(request,"core/product-update.html",{'form':form})    
+
+
+
+
+    
+
+
+def product_deletecelular(request,idProductoPC):
+    productocelular = Productocelular.objects.get(idProductocelular = idProductocelular)
+    productocelular.delete()
+    return redirect(to='product-list')  
+
+
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------    
+
+
+def Ri_list(request):
+    productosRi = ProductoRi.objects.all()
+    return render(request,"core/product-list.html",{'productosRi':productosRi})
+
+def product_newRi(request):
+    if request.method == 'POST':
+        form = ProductoRiForm(request.POST, request.FILES)
+        if form.is_valid():
+            idProductoRi = form.cleaned_data.get("idProductoRi")
+            descripcionRi = form.cleaned_data.get("descripcionRi")
+            precioRi = form.cleaned_data.get("precioRi")
+            stockRi = form.cleaned_data.get("stockRi")
+            imagenRi = form.cleaned_data.get("imagenRi")
+            
+            obj = ProductoRi.objects.create(
+                idProductoRi = idProductoRi,
+                descripcionRi = descripcionRi,
+                precioRi = precioRi,
+                stockRi = stockRi,
+                imagenRi = imagenRi,
+             
+            )
+            obj.save()
+            return redirect(reverse('product-new') + "?OK")
+            #return redirect(to ='product-list')
+        else:
+            return redirect(reverse('product-new') + "?FAIL")
+    else:
+        form = ProductoRiForm
+    return render(request,"core/product-new.html",{'form':form})
+
+
+
+
+
+def product_updateRi(request, idProductoRi):
+    productoRi = ProductoRi.objects.get(idProductoRi = idProductoRi)
+    form = ProductoRiForm( instance = productoRi )
+    #return render (request, "core/product-update.html",{'form':form})
+
+    if request.method == 'POST':
+        form = ProductoRiForm(request.POST, request.FILES, instance = productoRi)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('product-list')+ "?OK")
+        else:
+            return redirect(reverse('product-update')+ idProductoRi)
+
+    return render(request,"core/product-update.html",{'form':form})    
+
+
+
+
+    
+
+
+def product_deleteRi(request,idProductoRi):
+    productoRi = ProductoRi.objects.get(idProductoRi = idProductoRi)
+    productoRi.delete()
+    return redirect(to='product-list')  
