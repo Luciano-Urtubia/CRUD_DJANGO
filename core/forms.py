@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from .models import Producto
 from .models import ProductoPC
 
+
 class ProductoForm(ModelForm):
 
     class Meta:
@@ -34,34 +35,4 @@ class ProductoForm(ModelForm):
 
 
 
-
-
-class ProductoPcForm(ModelForm):
-
-    class Meta:
-        model = ProductoPC
-        fields = [
-            'idProductoPC',
-            'descripcionPc',
-            'precioPc',
-            'stockPc',
-            'imagenPc',
-            
-        ]
-        labels = {
-            'idProductoPC': 'codigo',
-            'descripcionPc': 'descripcion',
-            'precioPc' :'descripcion',
-            'stockPc': 'precio',
-            'imagenPc' :'imagen',
-            
-        }
-        widgets = {
-            'idProductoPC' : forms.TextInput(attrs={'class':'form-control'}),
-            'descripcionPc': forms.TextInput(attrs={'class':'form-control'}),
-            'precioPc': forms.TextInput(attrs={'class':'form-control','type':'number'}),
-            'stockPc': forms.TextInput(attrs={'class':'form-control','type':'number'}),
-            'imagenPc': forms.FileInput(attrs={'class':'form-control'}),
-            
-        }     
-    
+   

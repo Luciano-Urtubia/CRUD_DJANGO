@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %}Home | Django CRUD{% endblock %}
+
+
+{% block content %}
+
+{% load static %}
+
+
+
+
+
+    <div class="container justify-content-center">
+        <div class="row bg-secondary text-white rounded p-5 mt-4 mb-4">
+            <h1>Listado Productos</h1>
+        </div>
+        <div class="row ">
+            <div class="table-responsive">
+                <table class="table table-hover ">
+                    <thead>
+                        <th>IDPc</th>
+                        <th>DescripcionPc</th>
+                        <th>Precio unitarioPc</th>
+                        <th>StockPc</th>
+                        <th>ImagenPc</th>
+                       
+                
+
+                    </thead>
+                       
+
+
+                    <tbody>
+
+                        {% for c in productoscelular %}
+                         <tr>
+                             <td>{{c.idProductocelular}}</td>
+                             <td>{{c.descripcioncelular}}</td>
+                             <td>{{c.preciocelular}}</td>
+                             <td>{{c.stockcelular}}</td>
+                             {% if c.imagencelular %}
+                                    <td><td><img class="img-producto" src="{{c.imagencelular.url}}" alt=""></td>
+                                {% else %}
+                                    <td><img class="img-producto" src="{% static 'core/img/not-found-image.jpg' %}" alt=""></td>
+                                {% endif %}  
+                           
+
+                             <td>
+                              
+                             </td>
+                         </tr>
+
+                         {%endfor%}
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'core/js/my_scripts.js' %}"></script>
+{% endblock %}

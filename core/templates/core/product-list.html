@@ -20,6 +20,8 @@
                         <th>Imagen</th>
                         <th>Marca</th>
                         <th>Opciones</th>
+                        
+
 
                     </thead>
                          {% for p in productos%}
@@ -53,161 +55,11 @@
         </div>
     </div>
 
-
     
 
-<div class="container justify-content-center">
-        <div class="row bg-secondary text-white rounded p-5 mt-4 mb-4">
-            <h1>Listado Productos</h1>
-        </div>
-        <div class="row ">
-            <div class="table-responsive">
-                <table class="table table-hover ">
-                    <thead>
-                        <th>IDPc</th>
-                        <th>DescripcionPc</th>
-                        <th>Precio unitarioPc</th>
-                        <th>StockPc</th>
-                        <th>ImagenPc</th>
-                        <th>MarcaPc</th>
-                        <th>Opciones</th>
-
-                    </thead>
-                         {% for pc in productosPc %}
-                         <tr>
-                             <td>{{pc.idProductoPC}}</td>
-                             <td>{{pc.descripcionPc}}</td>
-                             <td>{{pc.precioPc}}</td>
-                             <td>{{pc.stockPc}}</td>
-                             {% if pc.imagenPc %}
-                                    <td><img class="img-productopc" src="{{pc.imagenPc.url}}" alt=""></td>
-                                {% else %}
-                                    <td><img class="img-productopc" src="{% static 'core/img/not-found-image.jpg' %}" alt=""></td>
-                                {% endif %}  
-                           
-
-                             <td>
-                                <a class="btn btn-warning" href="{% url 'product-updatePc' pc.idProductoPc  %}">Modificar</a>
-                                <a class="btn btn-danger" href="{% url 'product-deletePc' pc.idProductoPc  %}">Eliminar</a>
-                             </td>
-                         </tr>
-
-                         {%endfor%}
-
-                    <tbody>
-
-                    </tbody>
-
-                </table>
-            </div>
-
-        </div>
-    </div>
+   
 
 
-
-
-
-
-<div class="container justify-content-center">
-        <div class="row bg-secondary text-white rounded p-5 mt-4 mb-4">
-            <h1>Listado Productos</h1>
-        </div>
-        <div class="row ">
-            <div class="table-responsive">
-                <table class="table table-hover ">
-                    <thead>
-                        <th>IDcelular</th>
-                        <th>Descripcioncelular</th>
-                        <th>Precio unitariocelular</th>
-                        <th>Stockcelular</th>
-                        <th>Imagencelular</th>
-                        <th>Marcacelular</th>
-                        <th>Opciones</th>
-
-                    </thead>
-                         {% for celular in productoscelular %}
-                         <tr>
-                             <td>{{celular.idProductocelular}}</td>
-                             <td>{{celular.Descripcioncelular}}</td>
-                             <td>{{celular.preciocelular}}</td>
-                             <td>{{celular.Stockcelular}}</td>
-                             {% if pc.imagencelular %}
-                                    <td><img class="img-productopc" src="{{pc.imagencelular.url}}" alt=""></td>
-                                {% else %}
-                                    <td><img class="img-productopc" src="{% static 'core/img/not-found-image.jpg' %}" alt=""></td>
-                                {% endif %}  
-                             <td>{{pc.marca}}</td>
-
-                             <td>
-                                <a class="btn btn-warning" href="{% url 'product-updatecelular' celular.idProductocelular  %}">Modificar</a>
-                                <a class="btn btn-danger" href="{% url 'product-deletecelular' celular.idProductocelular  %}">Eliminar</a>
-                             </td>
-                         </tr>
-
-                         {%endfor%}
-
-                    <tbody>
-
-                    </tbody>
-
-                </table>
-            </div>
-
-        </div>
-    </div>
- 
-
-
-    
-
-<div class="container justify-content-center">
-    <div class="row bg-secondary text-white rounded p-5 mt-4 mb-4">
-        <h1>Listado Productos</h1>
-    </div>
-    <div class="row ">
-        <div class="table-responsive">
-            <table class="table table-hover ">
-                <thead>
-                    <th>IDRi</th>
-                    <th>DescripcionRi</th>
-                    <th>Precio unitarioRi</th>
-                    <th>StockRi</th>
-                    <th>ImagenRi</th>
-                    <th>MarcaRi</th>
-                    <th>Opciones</th>
-
-                </thead>
-                     {% for celular in productoscelular %}
-                     <tr>
-                         <td>{{Ri.idProductoRi}}</td>
-                         <td>{{Ri.DescripcionRi}}</td>
-                         <td>{{Ri.precioRi}}</td>
-                         <td>{{Ri.StockRi}}</td>
-                         {% if Ri.imagenRi %}
-                                <td><img class="img-productopc" src="{{pc.imagenRi.url}}" alt=""></td>
-                            {% else %}
-                                <td><img class="img-productopc" src="{% static 'core/img/not-found-image.jpg' %}" alt=""></td>
-                            {% endif %}  
-                         <td>{{pc.marca}}</td>
-
-                         <td>
-                            <a class="btn btn-warning" href="{% url 'product-updateRi' Ri.idProductoRi  %}">Modificar</a>
-                            <a class="btn btn-danger" href="{% url 'product-deleteRi' Ri.idProductoRi  %}">Eliminar</a>
-                         </td>
-                     </tr>
-
-                     {%endfor%}
-
-                <tbody>
-
-                </tbody>
-
-            </table>
-        </div>
-
-    </div>
-</div>
 
 
 
