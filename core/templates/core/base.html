@@ -11,6 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
     <!-- css propio -->
     <link rel="stylesheet" href="{% static 'core/css/estilospropios.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+     <!-- Bootstrap -->
+       <!-- Popper and Bootstrap JS -->    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.js" crossorigin="anonymous"></script>  
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
+
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -21,7 +28,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="product-list.html">
             <img class="img-logo" src="{% static 'core/img/Tecnologia-1.jpg' %}" alt="Logo" >
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,20 +37,40 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'listaf2' %}">VisionTec</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Prodoctos</a>
+                <a class="nav-link" href="{% url 'listaf3' %}">Productos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'lista_2' %}">Pc</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'lista_3' %}">SmartPhone</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'lista_4' %}">SmartWhatch</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'product-list' %}">Lista General de Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'product-new' %}">Formulario </a>
+              </li>
+              
+            
+             
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Socios
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <a class="dropdown-item" href="https://www.lenovo.com" target="_blank">Lenovo</a>
+                  <a class="dropdown-item" href="https://www.asus.com" target="_blank">Asus</a>
+                  <a class="dropdown-item" href="https://www.maconline.com" target="_blank">Maconline</a>
+                  <a class="dropdown-item" href="https://www.samsung.com" target="_blank">Samsung</a>
+                  <a class="dropdown-item" href="https://mistorechile.cl" target="_blank">Xiaomi</a>
+                  <a class="dropdown-item" href="https://consumer.huawei.com" target="_blank">Huawei</a>
                 </ul>
               </li>
               <li class="nav-item">
@@ -59,8 +86,10 @@
       </nav>
 
 
-
+     
     {% block content %}{% endblock %}
+
+
 
     <!-- Popper and Bootstrap JS -->    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.js" crossorigin="anonymous"></script>

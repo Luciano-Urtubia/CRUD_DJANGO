@@ -1,0 +1,221 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block title %} Nuevos  Productos | Django CRUD{% endblock %}
+
+
+
+{% block content %}
+<div class="jumbotron bg-secondary text-light ">
+  <!--la parte de arriba de entrada de texto jumbotron -->
+  <h1 class="display-8">VISIONTEC La información tecnológica a tu alcance </h1>
+  <p class="lead">regístrate en nuestra pagina para obtener contenido exclusivo y descuentos para eventos tecnológicos</p>
+
+  
+
+  <a class="btn btn-primary btn-lg" href="{% url 'product-list' %}" role="button">Listado De productos</a>
+    <div class="theme-switch-wrapper">
+  
+</div>
+
+
+</div>
+<div><br></div>
+
+
+           
+          <!-- Section Carousel -->
+
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'core/img/xiaomiportada.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'core/img/eventotecnologia1.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'core/img/Hp-Keylogger.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    
+
+    <hr>
+    <h3 class="display-4">Todo lo que puedes ver en nuestro sitio web</h3>
+    <p class="lead">En visióntec nos esforzamos para que la información este a tu alcance </p>
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="card bg-secondary text-light">
+                <img class="card-img-top" src="{% static 'core/img/xiaomi113.jpg' %}" alt="Imagen">
+                <div class="card-body">
+                    <h3 class="card-title">Smartphone</h3>
+                    <p class="card-text">Los celulares más esperados del año con toda su información</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'listaf3' %}" class="btn btn-secondary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card bg-secondary text-light">
+                <img class="card-img-top" src="{% static 'core/img/pcportadatargeta.jpg' %}" alt="Imagen">
+                <div class="card-body">
+                    <h3 class="card-title">Pc</h3>
+                    <p class="card-text"> La información favorita sobre los mejores laptops del mercado</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'listaf3' %}" class="btn btn-secondary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card bg-secondary text-light">
+                <img class="card-img-top" src="{% static 'core/img/smartwatchportadatargeta.jpg' %}" alt="Imagen">
+                <div class="card-body">
+                    <h3 class="card-title">Smartwatch</h3>
+                    <p class="card-text">Los smatwatch más cómodos y nuevos del mercado </p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'listaf3' %}" class="btn btn-secondary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        <div><br></div>
+    
+
+        <div><br></div>
+        <div><br></div>
+  
+       
+  <!-- Footer Section -->
+  <footer class="bg-secondary text-white pt-5 pb-4">
+       
+    <div class="container text-center text-md-left">
+        
+      <div class="row text-center text-md-left">
+  
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Technology</h5>
+          <p>¿Quiénes somos?
+            Somos una empresa dedicada a la venta de articulos tecnologicos., Asosiados a las empresas mas grandes de la tecnologia mundial ... <a class="text-dark" href="{% url 'listaf3' %}">Saber Mas</a> <link href="{% url 'listaf3' %}"></p>
+          
+        </div>
+  
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Atajos</h5>
+        <p>
+          <a href="{% url 'listaf2' %}" class="text-white" style="text-decoration: none;"> VisionTec</a>
+        </p>
+        <p>
+          <a href="{% url 'listaf3' %}" class="text-white" style="text-decoration: none;"> Prodoctos</a>
+        </p>
+        <p>
+          <a href="{% url 'lista_2' %}" class="text-white" style="text-decoration: none;"> Pc</a>
+        </p>
+        <p>
+          <a href="{% url 'lista_3' %}" class="text-white" style="text-decoration: none;"> SmartPhone</a>
+        </p>
+        <p>
+          <a href="{% url 'lista_4' %}" class="text-white" style="text-decoration: none;"> SmartWhatch</a>
+        </p>
+        <p>
+          <a href="{% url 'product-list' %}" class="text-white" style="text-decoration: none;"> Lista General de Producto</a>
+        </p>
+        <p>
+          <a href="{% url 'product-new' %}" class="text-white" style="text-decoration: none;"> Formulario</a>
+        </p>  
+      
+  
+        </div>
+  
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Links Alternativos</h5>
+        <p>
+          <a href="https://www.google.com/?hl=es" class="text-white" style="text-decoration: none;"> Google </a>
+        </p>
+        <p>
+          <a href="" class="text-white" style="text-decoration: none;"> Gmail</a>
+        </p>
+        <p>
+          <a href="" class="text-white" style="text-decoration: none;">Bootstrap</a>
+        </p>
+        <p>
+          <a href="" class="text-white" style="text-decoration: none;"> HTML</a>
+        </p>
+        </div>
+  
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning" >Contactos</h5>
+          <p>
+            <i class="fas fa-home mr-3"></i> RM, Av Carlos Valdovinos 27
+          </p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i>Veggies@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i>+56 12345678
+          </p>  
+          <p>
+            <i class="fas fa-print	 mr-3"></i>229951502
+          </p>
+        </div>
+        
+      </div>
+  
+      <hr class="mb-4">
+  
+      <div class="row align-items-center">
+        
+        <div class="col-md-7 col-lg-8">
+          <p>	Copyright ©2020 Derechos Reservados por:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-warning">Visiontec</strong>
+            </a></p>    
+          
+        </div>
+  
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-right">
+  
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/?lang=es" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+  
+    </div>
+    
+</footer>
+
+{% endblock %}

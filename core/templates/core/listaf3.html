@@ -1,0 +1,427 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %} Nuevos  Productos | Django CRUD{% endblock %}
+
+
+{% block content %}
+{% load static %}
+
+<div class="text-center - card-header">
+    <h1>Productos disponibles</h1> 
+  </div>
+
+
+<hr>
+<!--Productos Disponibles-->
+<div id="component-76145">
+    <div id="fatured-products-76145" class="container">
+        <!--Productos Section-->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-header">Productos Disponibles</h2>
+                    <hr>                   
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/reloghuawei2.jpg' %}" srcset="{% static 'core/img/reloghuawei2.jpg' %} 1x, {% static 'core/img/reloghuawei2.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_4' %}">SmartWatch 6 </a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $150000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/reloghuawei.jpg' %}" srcset="{% static 'core/img/reloghuawei.jpg' %} 1x,{% static 'core/img/reloghuawei.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_4' %}">Huawei band 6 </a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $180000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/relogmac2.jpg' %}" srcset="{% static 'core/img/relogmac2.jpg' %} 1x, {% static 'core/img/relogmac2.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_4' %}">SmartWatch Series 6</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $350000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/relogmac3.jpg' %}" srcset="{% static 'core/img/relogmac3.jpg' %} 1x, {% static 'core/img/relogmac3.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_4' %}">SmartWatch SE 6</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $380000
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>     
+</div> 
+
+<div id="component-76145">
+    <div id="fatured-products-76145" class="container">
+        <!--Productos Section-->
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/zembook_pro3.jpg' %}" srcset="{% static 'core/img/zembook_pro3.jpg' %} 1x, {% static 'core/img/zembook_pro3.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_2' %}">Zenbook Duo</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1200000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/macbookm12.jpg' %}" srcset="{% static 'core/img/macbookm12.jpg' %} 1x, {% static 'core/img/macbookm12.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_2' %}">Macbook Air</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1500000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/macbookm13.jpg' %}" srcset="{% static 'core/img/macbookm13.jpg' %} 1x, {% static 'core/img/macbookm13.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_2' %}">M1</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1400000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/macbookm11.jpg' %}" srcset="{% static 'core/img/macbookm11.jpg' %} 1x, {% static 'core/img/macbookm11.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_2' %}">M1 Pro</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1700000
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div id="component-76145">
+    <div id="fatured-products-76145" class="container">
+        <!--Productos Section-->
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/a523.png' %}" srcset="{% static 'core/img/a523.png' %} 1x, {% static 'core/img/a523.png' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_3' %}">A51</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $360000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/iphone132.jpg' %}" srcset="{% static 'core/img/iphone132.jpg' %} 1x, {% static 'core/img/iphone132.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_3' %}">Iphone 13 </a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1300000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/xiaomi111.jpg' %}" srcset="{% static 'core/img/xiaomi111.jpg' %} 1x, {% static 'core/img/xiaomi111.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_3' %}">Xiaomi 11 </a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1200000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/xiaomi112.jpg' %}" srcset="{% static 'core/img/xiaomi112.jpg' %} 1x, {% static 'core/img/xiaomi112.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="{% url 'lista_3' %}">Xiaomi 11 pro Max </a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1330000
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="component-76145">
+    <div id="fatured-products-76145" class="container">
+        <!--Productos Section-->
+        <div class="row">
+            <div class="col-12">        
+                <hr>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/Zenbook_ProDuo.jpg' %}" srcset="{% static 'core/img/Zenbook_ProDuo.jpg' %} 1x, {% static 'core/img/Zenbook_ProDuo.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="...">Zenbook 2 ProDuo</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1800000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/samsungblade1.jpg' %}" srcset="{% static 'core/img/samsungblade1.jpg' %} 1x, {% static 'core/img/samsungblade1.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="...">samsungblade1</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $1950000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/relogxiaomi3.jpg' %}" srcset="{% static 'core/img/relogxiaomi3.jpg' %} 1x, {% static 'core/img/relogxiaomi3.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="...">Xiaomi 3</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $132000
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 product-black">
+                <a href="...">
+                    <img class="img-fluid img-portafolio img-hover mb-3" src="{% static 'core/img/relogxiaomi2.jpg' %}" srcset="{% static 'core/img/relogxiaomi2.jpg' %} 1x, {% static 'core/img/relogxiaomi2.jpg' %} 2x" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>
+                        <a href="...">Xiaomi 4</a>
+                    </h3>
+                    <div class="price-mob mb-2">
+
+                        $450000
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<hr>
+
+
+<br>
+    <!-- Footer Section -->
+    <footer class="bg-secondary text-white pt-5 pb-4">
+       
+        <div class="container text-center text-md-left">
+            
+          <div class="row text-center text-md-left">
+      
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Visiontec</h5>
+              <p>¿Quiénes somos?
+                Somos una empresa dedicada a la venta de articulos tecnologicos, asosiados a las empresas mas grandes de la tecnologia mundial ... <a class="text-dark" href="{% url 'listaf3' %}">Saber Mas</a> <link href="{% url 'listaf3' %}"></p>
+              
+            </div>
+      
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Atajos</h5>
+            <p>
+              <a href="{% url 'listaf2' %}" class="text-white" style="text-decoration: none;"> VisionTec</a>
+            </p>
+            <p>
+              <a href="{% url 'listaf3' %}" class="text-white" style="text-decoration: none;"> Prodoctos</a>
+            </p>
+            <p>
+              <a href="{% url 'lista_2' %}" class="text-white" style="text-decoration: none;"> Pc</a>
+            </p>
+            <p>
+              <a href="{% url 'lista_3' %}" class="text-white" style="text-decoration: none;"> SmartPhone</a>
+            </p>
+            <p>
+              <a href="{% url 'lista_4' %}" class="text-white" style="text-decoration: none;"> SmartWhatch</a>
+            </p>
+            <p>
+              <a href="{% url 'product-list' %}" class="text-white" style="text-decoration: none;"> Lista General de Producto</a>
+            </p>
+            <p>
+              <a href="{% url 'product-new' %}" class="text-white" style="text-decoration: none;"> Formulario</a>
+            </p>  
+          
+      
+            </div>
+      
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Links Alternativos</h5>
+            <p>
+              <a href="https://www.google.com/?hl=es" class="text-white" style="text-decoration: none;"> Google </a>
+            </p>
+            <p>
+              <a href="" class="text-white" style="text-decoration: none;"> Gmail</a>
+            </p>
+            <p>
+              <a href="" class="text-white" style="text-decoration: none;">Bootstrap</a>
+            </p>
+            <p>
+              <a href="" class="text-white" style="text-decoration: none;"> HTML</a>
+            </p>
+            </div>
+      
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning" >Contactos</h5>
+              <p>
+                <i class="fas fa-home mr-3"></i> RM, Av Carlos Valdovinos 27
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>Veggies@gmail.com
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i>+56 12345678
+              </p>  
+              <p>
+                <i class="fas fa-print	 mr-3"></i>229951502
+              </p>
+            </div>
+            
+          </div>
+      
+          <hr class="mb-4">
+      
+          <div class="row align-items-center">
+            
+            <div class="col-md-7 col-lg-8">
+              <p>	Copyright ©2020 Derechos Reservados por:
+                <a href="#" style="text-decoration: none;">
+                  <strong class="text-warning">Visiontec</strong>
+                </a></p>    
+              
+            </div>
+      
+            <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+      
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a href="https://www.facebook.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/?lang=es" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.youtube.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+                  </li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+      
+        </div>
+        
+    </footer>
+
+
+{% endblock %}
+
